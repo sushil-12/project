@@ -6,8 +6,9 @@ class AuthenticatedApiService {
 
   constructor() {
     this.token = sessionStorage.getItem("token");
+    console.log("TOKEN", this.token)
     this.api = axios.create({
-      baseURL: 'http://127.0.0.1:3000',
+      baseURL: import.meta.env.VITE_API_URL,
     });
   }
 

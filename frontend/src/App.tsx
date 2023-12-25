@@ -12,15 +12,7 @@ import Technology from './_root/pages/Technology.tsx';
 const App = () => {
     return (
         <main className='flex h-screen'>
-            
             <Routes>
-                {/* Public Routes start */}
-                <Route element={<AuthLayout />} >
-                    <Route path='/sign-in' element={<SignInForm />} />
-                    {/* <Route path='/sign-up' element={<SignUpForm />} /> */}
-                </Route>
-                {/* Public Routes End */}
-
                 {/* Private Routes start */}
                 <Route element={<RootLayout />} >
                     <Route index element={<Home />} />
@@ -29,6 +21,15 @@ const App = () => {
                 </Route>
 
                 {/* Private Routes */}
+
+                {/* Public Routes start */}
+                <Route element={<AuthLayout />} >
+                    <Route path='/sign-in' element={<SignInForm />} />
+                    {/* <Route path='/sign-up' element={<SignUpForm />} /> */}
+                </Route>
+                {/* Public Routes End */}
+
+                
 
             </Routes>
             <Toaster />

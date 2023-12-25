@@ -21,7 +21,7 @@ const users = [
         permissions: ["create_user", "edit_user"],
       },
       {
-        id: 1,
+        id: 2,
         firstName: "John",
         lastName: "Doe",
         username: "john_doe",
