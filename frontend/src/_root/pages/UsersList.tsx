@@ -59,7 +59,7 @@ export default function UsersList() {
                                 <TableCell>{user.firstName+ '' +user.lastName}</TableCell>
                                 <TableCell>{user.email}</TableCell>
                                 <TableCell className="text-center"><Badge variant="outline" className="text-right">{user.role}</Badge></TableCell>
-                                <TableCell className="text-center">{user.permissions.map((item)=><Badge variant="outline" className="text-right">{item}</Badge>)}</TableCell>
+                                <TableCell className="text-center">{user.permissions.map((item)=><Badge variant="outline" className="text-right">{formatString(item)}</Badge>)}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

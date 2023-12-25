@@ -1,7 +1,7 @@
-import { getCurrentUser } from "@/lib/appwrite/api";
 import { IContextType, IUser } from "@/lib/types";
 import { useNavigate } from "react-router";
 import { createContext, useContext, useEffect, useState } from "react"
+import { getCurrentUser } from "@/lib/appwrite/api";
 export const INITIAL_USER = {id: '',firstName: '', lastName: '',username: '',email: '', role:'', permissions:[]};
 export const INITIAL_STATE = {
     user: INITIAL_USER,
@@ -22,6 +22,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         try {
             const currentAccount = await getCurrentUser();
             const userData = currentAccount?.data;
+            console.log(userData)
             if (currentAccount) {
                 setUser({
                     id: userData?._id,
