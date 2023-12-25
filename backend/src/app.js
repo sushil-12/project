@@ -18,6 +18,10 @@ app.use('/auth', authRoutes);
 // protected route
 app.use('/api', protectedRoutes);
 
+app.get("/", function(req, res) {
+    res.write("Hello, this is He Group API portals!");
+    res.end();
+});
 
 // 404 Error Handler
 app.use((req, res, next) => {
