@@ -1,11 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-class CustomError extends Error {
-  constructor(name: string, message: string, public originalError?: any) {
-    super(message);
-    this.name = name;
-  }
-}
 class AuthenticatedApiService {
   private token: string | null;
   private api: AxiosInstance;

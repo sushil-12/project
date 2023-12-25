@@ -24,7 +24,7 @@ const TopBar = () => {
                         <img src="/assets/icons/logout.svg" />
                     </Button>
                     <Link to={`/profile/${user.id}`} className="flex-center gap-3">
-                        <img src={user?.imageUrl || '/assets/images/ddefault-avatar.png'} alt="" width={50} height={50} className="h-8 w-8 rounded-full" />
+                        <img src={'/assets/images/ddefault-avatar.png'} alt="" width={50} height={50} className="h-8 w-8 rounded-full" />
                     </Link>
                 </div>
             </div>
